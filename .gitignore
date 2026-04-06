@@ -1,7 +1,15 @@
+# Node modules
 node_modules/
-client/node_modules/
-client/build/
-.env
-.DS_Store
-*.log
+
+# Build output
+build/
 dist/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# MacOS
+.DS_Store
