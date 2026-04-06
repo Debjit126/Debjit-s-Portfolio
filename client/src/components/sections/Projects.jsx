@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import SectionHeader from '../ui/SectionHeader';
-import { fadeUp, scaleIn, viewportConfig } from '../../utils/motion';
+import { scaleIn, viewportConfig } from '../../utils/motion';
 
 const FALLBACK = [
   { title: 'MERN E-Commerce Platform', description: 'Full-featured online store with product listings, cart management, user authentication, order processing, and an admin dashboard for inventory management.', tag: 'Full Stack · Featured', tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'bcryptjs'], github: '#', live: '#', emoji: '🏪', featured: true },

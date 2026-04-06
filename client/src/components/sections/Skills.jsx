@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SectionHeader from '../ui/SectionHeader';
-import { scaleIn, staggerContainer, viewportConfig } from '../../utils/motion';
+import { scaleIn, viewportConfig } from '../../utils/motion';
 
 const FALLBACK_SKILLS = [
    { category: 'Java Development',    icon: '☕', items: ['Java','React.js', 'JavaScript ES6+', 'HTML5', 'CSS3', 'Redux', 'Tailwind CSS'] },
