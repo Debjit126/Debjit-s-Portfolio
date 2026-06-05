@@ -16,7 +16,7 @@ const useFetch = (fetchFn, deps = []) => {
       .finally(() => { if (!cancelled) setLoading(false); });
 
     return () => { cancelled = true; };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, deps);
 
   return { data, loading, error };
