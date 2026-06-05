@@ -1,7 +1,7 @@
-/* ── Google Fonts fallback ─────────────────────────── */
+
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Clash+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
-/* ── Design Tokens ────────────────────────────────── */
+
 :root {
   --ink:     #0a0a0b;
   --ink2:    #111115;
@@ -27,7 +27,6 @@
   --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* ── Reset ────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -49,27 +48,23 @@ body {
   cursor: none;
 }
 
-/* ── Custom cursor ────────────────────────────────── */
+
 body * { cursor: none !important; }
 
-/* ── Scrollbar ────────────────────────────────────── */
+
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--ink); }
 ::-webkit-scrollbar-thumb { background: var(--g1); border-radius: 2px; }
-
-/* ── Selection ────────────────────────────────────── */
 ::selection { background: rgba(212, 175, 90, 0.25); color: var(--g2); }
 
-/* ── Links ────────────────────────────────────────── */
 a { color: inherit; text-decoration: none; }
 
-/* ── Images ───────────────────────────────────────── */
 img { display: block; max-width: 100%; }
 
-/* ── Section spacing ──────────────────────────────── */
+
 section { padding: 130px 64px; position: relative; }
 
-/* ── Utility classes ──────────────────────────────── */
+
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -79,7 +74,6 @@ section { padding: 130px 64px; position: relative; }
   border: 0;
 }
 
-/* ── Shimmer keyframe (used via inline animation) ── */
 @keyframes shimmer {
   0%   { background-position: 0% 50%; }
   100% { background-position: 250% 50%; }
@@ -101,7 +95,6 @@ section { padding: 130px 64px; position: relative; }
   100%  { transform: translateY(0); opacity: 0; }
 }
 
-/* ── Noise overlay ────────────────────────────────── */
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -111,7 +104,6 @@ section { padding: 130px 64px; position: relative; }
   z-index: 9000;
 }
 
-/* ── Responsive ───────────────────────────────────── */
 @media (max-width: 1024px) {
   section { padding: 100px 32px; }
 }
