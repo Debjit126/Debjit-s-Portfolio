@@ -1,7 +1,4 @@
-/**
- * SEED SCRIPT — Run once to populate your MongoDB
- * Usage: node server/seed.js
- */
+
 require('dotenv').config();
 const mongoose = require('mongoose');
 
@@ -16,7 +13,7 @@ const seed = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     console.log('✅ Connected to MongoDB');
 
-    // Clear existing
+  
     await Promise.all([
       Profile.deleteMany(),
       Project.deleteMany(),
@@ -26,7 +23,7 @@ const seed = async () => {
     ]);
     console.log('🗑  Cleared existing data');
 
-    // ── Profile ───────────────────────────────────────────
+   
     await Profile.create({
       name: 'Debjit Dey',
       title: 'Full Stack Developer',
@@ -43,7 +40,7 @@ const seed = async () => {
       stats: { years: '3+', projects: '15+', certs: '6+' },
     });
 
-    // ── Skills ────────────────────────────────────────────
+  
     await Skill.insertMany([
       { category: 'Frontend',             icon: '⚡', order: 1, items: ['React.js', 'JavaScript ES6+', 'HTML5', 'CSS3', 'Redux', 'Tailwind CSS', 'Responsive Design'] },
       { category: 'Backend & APIs',       icon: '🖥',  order: 2, items: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth', 'Nodemailer', 'bcryptjs', 'Middleware'] },
@@ -53,7 +50,6 @@ const seed = async () => {
       { category: 'Concepts & Practices', icon: '🔩', order: 6, items: ['MVC Architecture', 'CRUD Operations', 'Clean Code', 'Agile / Scrum', 'Code Review'] },
     ]);
 
-    // ── Experience ────────────────────────────────────────
     await Experience.insertMany([
       {
         role: 'Full Stack Developer',
@@ -84,7 +80,6 @@ const seed = async () => {
       },
     ]);
 
-    // ── Projects ──────────────────────────────────────────
     await Project.insertMany([
       {
         title: 'MERN E-Commerce Platform',
@@ -132,7 +127,7 @@ const seed = async () => {
       },
     ]);
 
-    // ── Certifications ────────────────────────────────────
+ 
     await Certification.insertMany([
       { name: 'Complete MERN Stack Developer Course',       issuer: 'Udemy',                          year: '2024', icon: '🎓', order: 1 },
       { name: 'React — The Complete Guide incl. Redux',     issuer: 'Udemy · Maximilian Schwarzmüller', year: '2023', icon: '⚛️', order: 2 },
